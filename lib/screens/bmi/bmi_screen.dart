@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 // import 'package:syncfusion_flutter_core/legend_internal.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
+import 'package:track_app/screens/bmi/bmi_completion.dart';
 
 class BmiScreen extends StatefulWidget {
   const BmiScreen({Key? key}) : super(key: key);
@@ -174,16 +175,22 @@ class _BmiScreenState extends State<BmiScreen> {
           height: heighOfScreen * 70,
           width: widthOfScreen * 100,
         ),
-        Container(
-          height: heighOfScreen * 5,
-          width: widthOfScreen * 75,
-          decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 10, 37, 156),
-            border: Border.all(color: const Color.fromARGB(255, 5, 19, 82)),
-            borderRadius: BorderRadius.circular(10),
+        InkWell(
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const bmiCompleter()));
+          },
+          child: Container(
+            height: heighOfScreen * 5,
+            width: widthOfScreen * 75,
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 10, 37, 156),
+              border: Border.all(color: const Color.fromARGB(255, 5, 19, 82)),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: const Center(
+                child: Text('Next', style: TextStyle(color: Colors.white))),
           ),
-          child: const Center(
-              child: Text('Next', style: TextStyle(color: Colors.white))),
         )
       ]),
     );

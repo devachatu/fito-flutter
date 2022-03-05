@@ -1,5 +1,5 @@
-import 'package:track_app/heightScreen/height_styles.dart';
-import 'package:track_app/heightScreen/height_utils.dart';
+import 'package:track_app/screens/height/height_styles.dart';
+import 'package:track_app/screens/height/height_utils.dart';
 import 'package:flutter/material.dart';
 
 class HeightSlider extends StatelessWidget {

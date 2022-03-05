@@ -1,8 +1,8 @@
 import 'dart:math' as math;
 
-import 'package:track_app/heightScreen/height_slider.dart';
-import 'package:track_app/heightScreen/height_styles.dart';
-import 'package:track_app/heightScreen/height_utils.dart';
+import 'package:track_app/screens/height/height_slider.dart';
+import 'package:track_app/screens/height/height_styles.dart';
+import 'package:track_app/screens/height/height_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 //import 'package:flutter_svg/flutter_svg.dart';
@@ -186,19 +186,19 @@ class _HeightPickerState extends State<HeightPicker> {
 
     return Align(
       alignment: Alignment.centerLeft,
-      //child: IgnorePointer(
-      child: Padding(
-        padding: EdgeInsets.only(
-          left: screenAwareSize(5.0, context),
-          bottom: marginBottomAdapted(context),
-          top: marginTopAdapted(context),
-        ),
-        child: Column(
-          children: labels,
-          mainAxisAlignment: MainAxisAlignment.start,
+      child: IgnorePointer(
+        child: Padding(
+          padding: EdgeInsets.only(
+            left: screenAwareSize(5.0, context),
+            bottom: screenAwareSize(5.0, context),
+            top: marginTopAdapted(context),
+          ),
+          child: Column(
+            children: labels,
+            mainAxisAlignment: MainAxisAlignment.center,
+          ),
         ),
       ),
-      //),
     );
   }
 
@@ -210,7 +210,7 @@ class _HeightPickerState extends State<HeightPicker> {
         "images/person.svg",
         height: personImageHeight,
         width: personImageHeight / 3,
-        color: Colors.blue.shade100,
+        color: Colors.green.shade200,
       ),
     );
   }

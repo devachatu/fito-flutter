@@ -2,8 +2,9 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:track_app/BMI%20SCreen/bmi_screen.dart';
-import 'package:track_app/heightScreen/height_picker.dart';
+import 'package:track_app/screens/height/height_picker.dart';
+
+import '../bmi/bmi_screen.dart';
 
 // ignore: must_be_immutable
 class GetHeight extends StatefulWidget {

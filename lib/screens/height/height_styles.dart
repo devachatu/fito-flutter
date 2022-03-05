@@ -1,7 +1,7 @@
-import 'package:track_app/heightScreen/height_utils.dart';
+import 'package:track_app/screens/height/height_utils.dart';
 import 'package:flutter/material.dart';
 
-export 'package:track_app/heightScreen/styles.dart';
+export 'package:track_app/screens/height/styles.dart';
 
 double marginBottomAdapted(BuildContext context) =>
     screenAwareSize(marginBottom, context);

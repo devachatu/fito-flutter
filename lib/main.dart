@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:track_app/BMI%20SCreen/bmi_screen.dart';
 // import 'package:track_app/heightScreen/get_height.dart';
-import 'package:track_app/login_screen.dart';
+import 'package:track_app/screens/login/login_screen.dart';
 // import 'package:track_app/AnimationUtils/animation_route.dart';
 
 void main() {
