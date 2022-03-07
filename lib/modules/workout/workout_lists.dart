@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:track_app/screens/workout/workout_screen.dart';
+import 'package:get/get.dart';
+import 'package:track_app/routes/app_pages.dart';
 import 'constants.dart';
+import 'workout_screen.dart';
 
 class WorkoutList extends StatelessWidget {
   const WorkoutList({Key? key}) : super(key: key);
@@ -41,8 +43,7 @@ class _WorkoutListPageState extends State<WorkoutListPage> {
       listItems.add(InkWell(
           splashColor: Colors.blue,
           onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const WorkOutScreen()));
+            Get.to(Routes.WORKOUT_SCREEN);
           },
           child: Container(
               height: 100,
