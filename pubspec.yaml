@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   get: ^4.3.4
+  dio:
   shared_preferences: ^2.0.5
   wave: ^0.2.0
   fluttertoast: ^8.0.3
@@ -44,6 +45,14 @@ dependencies:
   cached_network_image: ^3.0.0
   syncfusion_flutter_gauges: ^19.4.52
   step_progress_indicator: ^1.0.2
+  progress_loading_button:
+  firebase_storage: ^10.2.9
+  firebase_core: ^1.13.1
+  firebase_analytics: ^9.1.2
+  camera:
+  path_provider:
+  path:
+  image_picker: ^0.8.4+11
   
 
 dev_dependencies:

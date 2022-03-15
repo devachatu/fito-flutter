@@ -102,7 +102,7 @@ class _GetHeightState extends State<GetHeight> {
         ),
         InkWell(
           onTap: () {
-            Get.to(Routes.BMI);
+            Get.toNamed(Routes.BMI);
           },
           child: Container(
             height: heighOfScreen * 5,

@@ -162,7 +162,7 @@ class bmiCompleter extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              Get.to(Routes.WORKOUT_LIST);
+              Get.toNamed(Routes.WORKOUT_LIST);
             },
             child: Container(
               height: heighOfScreen * 5,

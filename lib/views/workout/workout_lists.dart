@@ -43,7 +43,7 @@ class _WorkoutListPageState extends State<WorkoutListPage> {
       listItems.add(InkWell(
           splashColor: Colors.blue,
           onTap: () {
-            Get.to(Routes.WORKOUT_SCREEN);
+            Get.toNamed(Routes.WORKOUT_SCREEN);
           },
           child: Container(
               height: 100,
@@ -131,6 +131,12 @@ class _WorkoutListPageState extends State<WorkoutListPage> {
             IconButton(
               icon: const Icon(Icons.search, color: Colors.black),
               onPressed: () {},
+            ),
+            IconButton(
+              icon: const Icon(Icons.camera_alt, color: Colors.black),
+              onPressed: () {
+                Get.toNamed(Routes.AI);
+              },
             ),
             IconButton(
               icon: const Icon(Icons.person, color: Colors.black),

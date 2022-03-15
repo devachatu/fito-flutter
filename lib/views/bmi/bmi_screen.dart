@@ -180,7 +180,7 @@ class _BmiScreenState extends State<BmiScreen> {
         ),
         InkWell(
           onTap: () {
-            Get.to(Routes.BMI_COMPLETION);
+            Get.toNamed(Routes.BMI_COMPLETION);
           },
           child: Container(
             height: heighOfScreen * 5,

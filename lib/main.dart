@@ -1,11 +1,21 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'app_binding.dart';
-import 'modules/screens/login/login_screen.dart';
+import 'controllers/ai_controller.dart';
 import 'routes/routes.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+var cameras = [];
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  cameras = await availableCameras(); //Get list of available cameras
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -110,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             InkWell(
               onTap: () {
-                Get.toNamed(Routes.LOGIN);
+                Get.toNamed(Routes.AUTHHOME);
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,

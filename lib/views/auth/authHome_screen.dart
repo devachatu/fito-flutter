@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../routes/routes.dart';
-import '../height/get_height.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+import '../../../routes/app_pages.dart';
+import '../../../shared/utilities/constants.dart';
+
+class AuthHomeScreen extends StatefulWidget {
+  const AuthHomeScreen({Key? key}) : super(key: key);
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<AuthHomeScreen> createState() => _AuthHomeScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen>
+class _AuthHomeScreenState extends State<AuthHomeScreen>
     with TickerProviderStateMixin {
   TabController? _controller;
   @override
@@ -25,7 +26,6 @@ class _LoginScreenState extends State<LoginScreen>
     MediaQueryData screen = MediaQuery.of(context);
     var widthOfScreen = screen.size.width / 100;
     var heighOfScreen = screen.size.height / 100;
-    var logoImage = const AssetImage("images/Applogo.png");
 
     return Scaffold(
       body: Column(
@@ -104,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen>
                       children: [
                         InkWell(
                           onTap: () {
-                            Get.to(Routes.GET_HEIGHT);
+                            Get.toNamed(Routes.REGISTER);
                           },
                           child: Container(
                             //color: Colors.amber,
@@ -134,7 +134,7 @@ class _LoginScreenState extends State<LoginScreen>
                         ),
                         InkWell(
                           onTap: () {
-                            Get.to(Routes.GET_HEIGHT);
+                            Get.toNamed(Routes.REGISTER);
                           },
                           child: Container(
                             //color: Colors.amber,
@@ -169,7 +169,7 @@ class _LoginScreenState extends State<LoginScreen>
                         children: [
                           InkWell(
                             onTap: () {
-                              Get.to(Routes.GET_HEIGHT);
+                              Get.toNamed(Routes.GET_HEIGHT);
                             },
                             child: Container(
                               //color: Colors.amber,
@@ -199,7 +199,7 @@ class _LoginScreenState extends State<LoginScreen>
                           ),
                           InkWell(
                             onTap: () {
-                              Get.to(Routes.GET_HEIGHT);
+                              Get.toNamed(Routes.GET_HEIGHT);
                             },
                             child: Container(
                               //color: Colors.amber,
